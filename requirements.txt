@@ -1,0 +1,6 @@
+readability-lxml
+goose
+eatiht
+dragnet
+boilerpipe
+libextract
