@@ -19,6 +19,7 @@ Place your HTML files into *./data/htmlfiles*, or generate them from urls with *
 
 - **benchmark.py** prints the result of the content extraction with each method, from a random HTML file in *./data/htmlfiles/*.
 Results & stats for each method can be found in **[benchmarkStats.ods](./benchmarkStats.ods)**.
+![](./stats.png)
 
 - **contentextraction.py** allows to generate a text file for each HTML file stored in *./data/htmlfiles/*, using the best method (currently Dragnet).
 
