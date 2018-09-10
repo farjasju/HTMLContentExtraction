@@ -1,10 +1,12 @@
 # HTMLContentExtraction
 
-Benchmarks the most common open-source HTML content extractors.
+Benchmarks the most common open-source HTML content extractors : Goose, eatiht, Dragnet, libextract, BoilerPipe
 
 ## Get started
 
 ### Prerequisites
+
+Developed in Python 2.7
 
 Install the requirements.txt :
 
