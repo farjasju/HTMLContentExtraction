@@ -1,6 +1,6 @@
 # HTMLContentExtraction
 
-Benchmarks the most common open-source HTML content extractors : Goose, eatiht, Dragnet, libextract, BoilerPipe
+Benchmarks the most common open-source HTML content extractors : Goose, eatiht, Dragnet, libextract & BoilerPipe
 
 ## Get started
 
