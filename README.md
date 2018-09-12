@@ -25,4 +25,4 @@ Results & stats for each method can be found in **[benchmarkStats.ods](./benchma
 
 - **contentextraction.py** allows to generate a text file for each HTML file stored in *./data/htmlfiles/*, using the best method (currently Dragnet).
 
-
+- **duplicates.py** allows to generate a csv file as a result, showing the url, the extracted text and if the record is a duplicate of another one. Use once the text content files are generated.
