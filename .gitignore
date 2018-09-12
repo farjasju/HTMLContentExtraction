@@ -1,4 +1,4 @@
 /data/contentfiles/*.txt
 /data/htmlfiles/*.html
-/data/*.csv
-duplicates.py
+/data/*
+
