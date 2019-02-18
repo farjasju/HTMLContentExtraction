@@ -69,9 +69,9 @@ def main():
         nb_duplicates = 0
         media_recognition_errors_list = []
 
-        with open('./data/processed_urls.csv', 'w') as resultfile:
+        with open('./data/anses_processed_urls.csv', 'w') as resultfile:
             fieldnames = ['id', 'url', 'media_name', 'webentity', 'publication_date',
-                          'extracted_content', 'is_url_duplicate', 'is_content_duplicate', 'is_empty']
+                          'extracted_content', 'is_url_duplicate', 'is_content_duplicate', 'is_empty', 'contains_anses']
             writer = csv.DictWriter(resultfile, fieldnames=fieldnames)
             writer.writeheader()
 
@@ -106,9 +106,13 @@ def main():
                 is_url_duplicate = False
                 is_content_duplicate = False
                 is_empty = False
+                contains_anses = False
 
                 with open(DIR_PATH + file_id + ".txt") as f:
                     text_content = f.read()
+
+                if 'anses' in text_content.lower():
+                    contains_anses = True
 
                 if file_id in url_duplicates:
                     is_url_duplicate = True
@@ -125,7 +129,7 @@ def main():
                 last_checked = file
 
                 writer.writerow({'id': file_id, 'url': file_url, 'media_name': file_media_name, 'webentity': file_media_entity, 'publication_date': file_date,
-                                 'extracted_content': text_content, 'is_url_duplicate': is_url_duplicate, 'is_content_duplicate': is_content_duplicate, 'is_empty': is_empty})
+                                 'extracted_content': text_content, 'is_url_duplicate': is_url_duplicate, 'is_content_duplicate': is_content_duplicate, 'is_empty': is_empty, 'contains_anses': contains_anses})
 
             print(str(media_recognition_errors) + " media recognition errors.")
             print(sorted(media_recognition_errors_list))
@@ -134,5 +138,5 @@ def main():
     except KeyboardInterrupt:
         message("\nTerminated by user action")
 
-if __name__ == '__main__':
-    main()
+
+main()
